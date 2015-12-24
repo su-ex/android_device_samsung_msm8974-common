@@ -21,7 +21,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
@@ -89,10 +88,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8974 \
     memtrack.msm8974
 
-# IR
-PRODUCT_PACKAGES += \
-    consumerir.msm8974
-
 # Keylayouts
 PRODUCT_COPY_FILES += \
     device/samsung/msm8974-common/keylayout/cyttsp-i2c.kl:system/usr/keylayout/cyttsp-i2c.kl \
@@ -111,7 +106,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libdivxdrmdecrypt \
-    libdashplayer \
     libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -119,21 +113,13 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc \
     libqcmediaplayer \
-    libstagefrighthw \
-    qcmediaplayer
-
-PRODUCT_BOOT_JARS += qcmediaplayer
+    libstagefrighthw
 
 # Power HAL
 PRODUCT_PACKAGES += \
     power.msm8974
-
-# USB
-PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
 
 # common msm8974
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
